@@ -1,0 +1,133 @@
+export interface LaunchStep {
+  number: number;
+  id: string;
+  title: string;
+  shortDesc: string;
+  longDesc: string;
+  deliverable: string;
+  consoleRoute: string;
+  badge: string;
+}
+
+export const launchSteps: LaunchStep[] = [
+  {
+    number: 1,
+    id: 'source-review',
+    title: 'Source Code Review',
+    shortDesc: 'Automated 14-point audit of existing code files.',
+    longDesc: 'Deep static analysis for hardcoded pixels, missing back keys, unhandled promise errors, and deprecated APIs.',
+    deliverable: 'Audited file findings & severity-tagged issue list',
+    consoleRoute: '/console/review',
+    badge: '14 Automated Checks',
+  },
+  {
+    number: 2,
+    id: 'real-tv-test',
+    title: 'Real-TV & webOS Testing',
+    shortDesc: 'Validation on physical LG TV panels and emulator.',
+    longDesc: 'Physical verification on actual LG OLED/webOS hardware with authentic remote controls and Developer Mode tools.',
+    deliverable: 'Physical hardware diagnostic log & input traces',
+    consoleRoute: '/console/simulator',
+    badge: 'Hardware Verified',
+  },
+  {
+    number: 3,
+    id: 'fix-issues',
+    title: 'Compatibility & Runtime Fixes',
+    shortDesc: 'Remediating UI flaws, crash loops, and DOM errors.',
+    longDesc: 'Direct code remediation resolving runtime crashes, offline edge cases, and memory growth during continuous viewing.',
+    deliverable: 'Tested code diffs with before/after comparison',
+    consoleRoute: '/console/review',
+    badge: 'Zero Runtime Errors',
+  },
+  {
+    number: 4,
+    id: 'remote-navigation',
+    title: 'Remote Navigation Verification',
+    shortDesc: 'D-pad 5-way traversal and Back-button exit flow.',
+    longDesc: 'Rigorous remote focus testing: no lost cursor, proper Back key handling on root and nested views, and pointer responsiveness.',
+    deliverable: 'Focus-path validation & key event log',
+    consoleRoute: '/console/simulator',
+    badge: 'LG Remote Compliant',
+  },
+  {
+    number: 5,
+    id: 'screen-sizing',
+    title: 'Screen Sizing & Resolution Lab',
+    shortDesc: 'Responsive scaling across 720p, 1080p, 4K, and 8K.',
+    longDesc: 'Verification of TV safe zones (5% inset), rem scaling, and high-DPI rasterization across all LG display classes.',
+    deliverable: 'Resolution scaling matrix & safe-area overlay report',
+    consoleRoute: '/console/resolution',
+    badge: 'Safe-Zone Tested',
+  },
+  {
+    number: 6,
+    id: 'appinfo-config',
+    title: 'appinfo.json Configuration',
+    shortDesc: 'Strict manifest schema validation & auto-correction.',
+    longDesc: 'Auditing reverse-domain bundle IDs, semver versioning, resolution declarations, and background image parameters.',
+    deliverable: 'Store-ready appinfo.json manifest file',
+    consoleRoute: '/console/config',
+    badge: 'Schema Validated',
+  },
+  {
+    number: 7,
+    id: 'production-build',
+    title: 'Production Build & Packaging',
+    shortDesc: 'Repeatable ares-package IPK build pipeline.',
+    longDesc: 'Automated minification, tree-shaking, packaging, and artifact generation with SHA-256 checksum tracking.',
+    deliverable: 'Production release IPK package file',
+    consoleRoute: '/console/build',
+    badge: 'Release IPK Ready',
+  },
+  {
+    number: 8,
+    id: 'icons-assets',
+    title: 'Store Assets & Icon Inspection',
+    shortDesc: 'Pixel-perfect dimension check on icons and splash art.',
+    longDesc: 'Pre-flight screening of 130×130 launcher icons, 160×160 store icons, splash backgrounds, and store screenshots.',
+    deliverable: 'Asset conformity certification & crop corrections',
+    consoleRoute: '/console/assets',
+    badge: 'Asset Spec Approved',
+  },
+  {
+    number: 9,
+    id: 'signing-validation',
+    title: 'Signing & Pre-Submission Validation',
+    shortDesc: 'Cryptographic signature and Seller Lounge dry-run.',
+    longDesc: 'Validation against LG Seller Lounge automated security and compliance scanners to eliminate avoidable bounce-backs.',
+    deliverable: 'Signed package with verified SHA-256 checksum',
+    consoleRoute: '/console/build',
+    badge: 'Signature Verified',
+  },
+  {
+    number: 10,
+    id: 'submission',
+    title: 'LG Content Store Submission',
+    shortDesc: 'Seller Lounge upload and QA review onboarding.',
+    longDesc: 'Complete metadata staging, category mapping, country licensing, release note authoring, and direct submission to LG QA.',
+    deliverable: 'Submitted intake confirmation & tracking ticker',
+    consoleRoute: '/console/submission',
+    badge: 'Direct Seller Intake',
+  },
+  {
+    number: 11,
+    id: 'review-fixes',
+    title: 'Review Fixes & QA Loop Turnaround',
+    shortDesc: 'Rapid triage and fix for any feedback from LG QA.',
+    longDesc: 'Direct communication with LG reviewers, targeted code patching for flagged items, and expedited resubmission.',
+    deliverable: 'Remediation log and expedited resubmission ticket',
+    consoleRoute: '/console/submission',
+    badge: 'Rejection Fixes Included',
+  },
+  {
+    number: 12,
+    id: 'live',
+    title: 'Store Approval & Public Launch',
+    shortDesc: 'Global publication and multi-app rollout template.',
+    longDesc: 'Successful store activation, live monitoring, and instant transfer of the verified deployment template to the remaining 40 apps.',
+    deliverable: 'Live app in LG Store & batch template rollout',
+    consoleRoute: '/console/portfolio',
+    badge: 'Live in Content Store',
+  },
+];

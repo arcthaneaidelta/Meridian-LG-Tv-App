@@ -1,0 +1,55 @@
+:root {
+  --bg: #F4F1EC;
+  --surface: #FBF9F6;
+  --elevated: #FFFFFF;
+  --screen: #14181C;
+  --screen-2: #1E252B;
+  --text: #1B2127;
+  --text-2: #4A545E;
+  --muted: #69737D;
+  --border: #DDD7CE;
+  --primary: #2F4A47;
+  --primary-hover: #3A5A56;
+  --primary-active: #223735;
+  --secondary: #8FA79F;
+  --accent: #C9794F;
+  --success: #4E7D5B;
+  --warning: #B0822A;
+  --error: #B5503F;
+  --info: #4F6F8F;
+
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-ui: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+  
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-pill: 999px;
+  
+  --sh-1: 0 1px 2px rgba(27,33,39,.06);
+  --sh-2: 0 4px 14px rgba(27,33,39,.08);
+  --sh-3: 0 18px 48px rgba(27,33,39,.14);
+
+  --t-fast: 140ms;
+  --t-med: 260ms;
+  --t-slow: 520ms;
+  --ease-out: cubic-bezier(.22,1,.36,1);
+  --ease-inout: cubic-bezier(.65,0,.35,1);
+
+  --z-nav: 40;
+  --z-drawer: 60;
+  --z-modal: 80;
+  --z-toast: 100;
+}

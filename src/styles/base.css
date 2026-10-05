@@ -1,0 +1,62 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    color: var(--text);
+    background-color: var(--bg);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Global focus styles */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  /* TV screen specific focus ring */
+  .tv-focus-target:focus,
+  .tv-focus-active {
+    outline: 4px solid var(--accent) !important;
+    outline-offset: 2px !important;
+    transform: scale(1.06);
+    transition: transform var(--t-fast) var(--ease-out), outline var(--t-fast) var(--ease-out);
+    z-index: 10;
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
